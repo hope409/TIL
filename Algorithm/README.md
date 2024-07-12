@@ -6,4 +6,6 @@
 > ex) swea_2000.py
 
 # 분류
-
+- [swea 2072번](https://github.com/hope409/TIL/blob/master/Algorithm/swea_2072.py)
+- [swea 2001번](https://github.com/hope409/TIL/blob/master/Algorithm/swea_2001.py)
+- [swea 1206번](https://github.com/hope409/TIL/blob/master/Algorithm/swea_1206.py)
