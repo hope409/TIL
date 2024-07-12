@@ -1,23 +1,32 @@
-n = int(input())
-arr = list()
-arr2 = list()
-sol = 0
-arr.append(list(map(int, input().split())))
+T = 10
+for test_case in range(1, T + 1):
 
-for i in range(n):
-    if i < 2 or i > n-3:
-        continue
-    else:
-        l1 = arr[i] - arr[i-1]
-        r1 = arr[i] - arr[i+1]
-        l2 = arr[i] - arr[i-2]
-        r2 = arr[i] - arr[i+2]
-        arr2.append(l1)
-        arr2.append(r1)
-        arr2.append(l2)
-        arr2.append(r2)
+    n = int(input())
+    arr = list()
+    sol = 0
+    arr = list(map(int, input().split()))
+    # print(arr)
 
-        if l1 > 0 and r1 > 0:
-            if l2 > 0 and r2 > 0:
-                sol = sol + arr2.min()
+    for i in range(n):
+        if i < 2 or i > n-3:
+            continue
+            print(i)
+        else:
+            # print(arr[i])
+            # print(arr[(i-1)])
+            # print(arr[(i-2)])
+            l1 = arr[i] - arr[i-1]
+            r1 = arr[i] - arr[i+1]
+            l2 = arr[i] - arr[i-2]
+            r2 = arr[i] - arr[i+2]
+            # print(l2, l1, r1, r2)
+
+            if l1 > 0 and r1 > 0 and l2 > 0 and r2 > 0:
+                arr2 = list()
+                arr2.append(l1)
+                arr2.append(r1)
+                arr2.append(l2)
+                arr2.append(r2)
+                # print(f"min(arr2) : {min(arr2)}")
+                sol = sol + min(arr2)
     print(sol)
