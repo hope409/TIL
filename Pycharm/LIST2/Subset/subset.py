@@ -61,3 +61,25 @@ for test_case in range(1, t + 1):
 
     else:
         print(f"#{test_case} 0")
+
+
+status_arr = list()
+bit = [0] * 2
+for i0 in range(2):                                    # i0 = 0                 i0 = 1
+    bit[0] = i0
+    for i12 in range(2):                               # [0, 0] , [0, 1]        [1, 0],  [1, 1]
+        bit[1] = i1
+        status_arr.append([arr[i] * bit[i] for i in range(12)])
+
+bit[0] = 0
+bit[1] = 0
+status_arr.append([arr[i] * bit[i] for i in range(2)])
+bit[0] = 0
+bit[1] = 1
+status_arr.append([arr[i] * bit[i] for i in range(2)])
+bit[0] = 1
+bit[1] = 0
+status_arr.append([arr[i] * bit[i] for i in range(2)])
+bit[0] = 1
+bit[1] = 1
+status_arr.append([arr[i] * bit[i] for i in range(2)])
